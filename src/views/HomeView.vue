@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <NavigationBar />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import NavigationBar from "@/components/NavigationBar.vue";
+
+import useTitleMixin from "@/mixins/titleMixin";
 
 export default defineComponent({
+  setup() {
+    useTitleMixin("Home");
+  },
+  title: "Home",
   name: "HomeView",
   components: {
-    HelloWorld,
+    NavigationBar,
   },
 });
 </script>
