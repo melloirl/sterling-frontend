@@ -1,8 +1,12 @@
 <template>
   <NotificationBar></NotificationBar>
-  <div style="padding: 0 8rem">
+  <div style="padding: 0 4rem">
     <div class="account-nav">
-      <img src="../assets/logo.png" alt="logo" />
+      <img
+        src="../assets/logo.png"
+        alt="logo"
+        style="position: absolute; left: 43vw; top: 70px"
+      />
       <nav aria-label="User options" class="user">
         <Icon
           icon="ph:heart-bold"

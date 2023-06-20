@@ -26,7 +26,7 @@ const closeNotification = () => {
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  margin-bottom: 1rem;
+  margin-bottom: -1.3rem;
 }
 
 .notification-bar p {
