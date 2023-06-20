@@ -1,12 +1,8 @@
 <template>
   <NotificationBar></NotificationBar>
-  <div style="padding: 0 4rem">
+  <div class="navigation-container">
     <div class="account-nav">
-      <img
-        src="../assets/logo.png"
-        alt="logo"
-        style="position: absolute; left: 43vw; top: 70px"
-      />
+      <img src="../assets/logo.png" alt="logo" />
       <nav aria-label="User options" class="user">
         <Icon
           icon="ph:heart-bold"
@@ -66,6 +62,7 @@ const iconColor = "#7e6598";
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@100;700&display=swap");
+
 .account-nav {
   display: flex;
   align-items: center;
@@ -76,17 +73,24 @@ const iconColor = "#7e6598";
   content: "";
   flex: 1;
 }
-
+.account-nav img {
+  position: absolute;
+  left: 43vw;
+  top: 70px;
+}
 .product {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  overflow-x: auto;
 }
+
 .product a {
   font-family: "Cinzel Decorative", cursive;
   text-decoration: none;
   font-weight: 400;
   font-size: 1.5rem;
   color: #000;
+  flex-shrink: 0;
 }
 
 .user {
@@ -117,5 +121,40 @@ const iconColor = "#7e6598";
   height: 36px;
   font-size: 15px;
   line-height: 18px;
+}
+.navigation-container {
+  padding: 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .account-nav {
+    flex-direction: column;
+  }
+  .account-nav img {
+    position: relative;
+    left: auto;
+  }
+  .user {
+    justify-content: center;
+    margin-top: 1rem;
+    visibility: hidden;
+  }
+
+  .product {
+    justify-content: flex-start;
+  }
+
+  .product a {
+    margin-right: 0.5rem;
+  }
+
+  .login {
+    margin: 1rem auto;
+    width: auto;
+    visibility: hidden;
+  }
+  .navigation-container {
+    padding: 0 0.5rem;
+  }
 }
 </style>
