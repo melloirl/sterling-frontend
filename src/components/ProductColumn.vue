@@ -43,5 +43,6 @@ import ProductCard from "@/components/ProductCard.vue";
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 1rem;
+  margin-bottom: 120px;
 }
 </style>

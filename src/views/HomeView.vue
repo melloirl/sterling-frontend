@@ -4,6 +4,7 @@
     <NewsCarousel />
     <ColumnHeader title="Mais vendidos" subtitle="os favoritos" />
     <ProductColumn />
+    <ColumnHeader title="Categorias" subtitle="escolha por categorias" />
   </div>
 </template>
 
