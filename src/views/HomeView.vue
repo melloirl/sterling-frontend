@@ -30,3 +30,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.home {
+  overflow-x: hidden;
+}
+</style>
