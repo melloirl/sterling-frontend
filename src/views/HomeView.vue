@@ -3,6 +3,7 @@
     <NavigationBar />
     <NewsCarousel />
     <ColumnHeader title="Mais vendidos" subtitle="os favoritos" />
+    <ProductColumn />
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import { defineComponent } from "vue";
 import NavigationBar from "@/components/NavigationBar.vue";
 import NewsCarousel from "@/components/NewsCarousel.vue";
 import ColumnHeader from "@/components/ColumnHeader.vue";
+import ProductColumn from "@/components/ProductColumn.vue";
 
 import useTitleMixin from "@/mixins/titleMixin";
 
@@ -24,6 +26,7 @@ export default defineComponent({
     NavigationBar,
     NewsCarousel,
     ColumnHeader,
+    ProductColumn,
   },
 });
 </script>
