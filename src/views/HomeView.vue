@@ -15,11 +15,11 @@ import NewsCarousel from "@/components/NewsCarousel.vue";
 import ColumnHeader from "@/components/ColumnHeader.vue";
 import ProductColumn from "@/components/ProductColumn.vue";
 
-import useTitleMixin from "@/mixins/titleMixin";
+import usePageTitle from "@/composables/pageTitle";
 
 export default defineComponent({
   setup() {
-    useTitleMixin("Home");
+    usePageTitle("Home");
   },
   title: "Home",
   name: "HomeView",

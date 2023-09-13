@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
 // eslint-disable-next-line no-undef, @typescript-eslint/no-unused-vars
 const props = defineProps({
   title: {
@@ -34,6 +36,8 @@ const payByInstallements = (value: string, installements: number) => {
   const installementPrice = Number(value) / installements;
   return formatCurrency(installementPrice.toFixed(2));
 };
+
+const isHovered = ref(false);
 </script>
 
 <template>
@@ -41,8 +45,10 @@ const payByInstallements = (value: string, installements: number) => {
   <div class="product-card">
     <!-- Defines a squared div to showcase mocked products -->
     <div
-      class="product-card__image"
+      :class="`product-card__image ${isHovered ? 'hover' : ''}`"
       :style="{ backgroundImage: `url(${image})` }"
+      @mouseover="isHovered = true"
+      @mouseleave="isHovered = false"
     >
       <!-- If there is a tag prop, add a label with the tag value -->
       <div v-if="tag" class="product-card__tag">
@@ -52,7 +58,7 @@ const payByInstallements = (value: string, installements: number) => {
     <!-- Defines a squared div to showcase mocked products -->
     <div class="product-card__info">
       <!-- Defines a squared div to showcase mocked products -->
-      <div class="product-card__info__title">
+      <div :class="`product-card__info__title ${isHovered ? 'hover' : ''}`">
         <h3>{{ title }}</h3>
       </div>
       <!-- Defines a squared div to showcase mocked products -->
@@ -87,8 +93,15 @@ const payByInstallements = (value: string, installements: number) => {
   overflow: hidden;
   background-size: cover;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-end;
+}
+
+.product-card__image.hover {
+  border: solid #604977 1px;
+}
+.product-card__info__title.hover h3 {
+  color: #604977;
 }
 .product-card__info h3 {
   width: 100%;
