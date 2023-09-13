@@ -34,6 +34,8 @@
       subtitle="Peças de prata com semijoias"
     />
     <StoneProductRow />
+    <CertificationRow />
+    <SignNewsletter />
   </div>
 </template>
 
@@ -47,6 +49,8 @@ import SRow from "@/components/SRow.vue";
 import CategoryIcon from "@/components/CategoryIcon.vue";
 import StoneProductRow from "@/components/StoneProductRow.vue";
 import GiftRow from "@/components/GiftRow.vue";
+import CertificationRow from "@/components/CertificationRow.vue";
+import SignNewsletter from "@/components/SignNewsletter.vue";
 
 import usePageTitle from "@/composables/pageTitle";
 
@@ -65,6 +69,8 @@ export default defineComponent({
     CategoryIcon,
     StoneProductRow,
     GiftRow,
+    CertificationRow,
+    SignNewsletter,
   },
 });
 </script>

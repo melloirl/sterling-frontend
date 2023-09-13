@@ -7,7 +7,7 @@ const props = defineProps({
   },
   subtitle: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 </script>
@@ -17,7 +17,7 @@ const props = defineProps({
     <div class="row-header__title">
       <h2>{{ title }}</h2>
     </div>
-    <div class="row-header__subtitle">
+    <div v-if="subtitle" class="row-header__subtitle">
       <p>{{ subtitle }}</p>
     </div>
   </div>

@@ -9,18 +9,21 @@
           width="2rem"
           height="2rem"
           :color="iconColor"
+          style="cursor: pointer"
         />
         <Icon
           icon="ph:magnifying-glass-bold"
           width="2rem"
           height="2rem"
           :color="iconColor"
+          style="cursor: pointer"
         />
         <Icon
           icon="ph:basket-bold"
           width="2rem"
           height="2rem"
           :color="iconColor"
+          style="cursor: pointer"
         />
       </nav>
       <div class="login">
@@ -29,6 +32,7 @@
           width="2rem"
           height="2rem"
           :color="iconColor"
+          style="cursor: pointer"
         />
         <p>Entre ou cadastre-se</p>
       </div>
