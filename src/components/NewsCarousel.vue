@@ -136,7 +136,6 @@ watch(index, (newValue, oldValue) => {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 64px;
   margin-top: 13px;
 }
 

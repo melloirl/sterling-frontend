@@ -36,6 +36,7 @@ const props = defineProps({
   align-items: center;
   flex-direction: column;
   margin-bottom: 31px;
+  margin-top: 120px;
 }
 .column-header__title h2 {
   font-style: normal;
