@@ -13,11 +13,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="column-header">
-    <div class="column-header__title">
+  <div class="row-header">
+    <div class="row-header__title">
       <h2>{{ title }}</h2>
     </div>
-    <div class="column-header__subtitle">
+    <div class="row-header__subtitle">
       <p>{{ subtitle }}</p>
     </div>
   </div>
@@ -28,7 +28,7 @@ const props = defineProps({
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
 
-.column-header {
+.row-header {
   font-family: "Cinzel Decorative", cursive;
   width: 100vw;
   display: flex;
@@ -38,7 +38,7 @@ const props = defineProps({
   margin-bottom: 31px;
   margin-top: 120px;
 }
-.column-header__title h2 {
+.row-header__title h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -46,7 +46,7 @@ const props = defineProps({
   color: #604977;
 }
 
-.column-header__subtitle p {
+.row-header__subtitle p {
   font-family: "Cinzel", cursive;
   font-style: normal;
   font-weight: 400;

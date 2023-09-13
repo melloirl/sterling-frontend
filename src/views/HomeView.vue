@@ -2,9 +2,9 @@
   <div class="home">
     <NavigationBar />
     <NewsCarousel />
-    <ColumnHeader title="Mais vendidos" subtitle="os favoritos" />
-    <ProductColumn />
-    <ColumnHeader title="Categorias" subtitle="escolha por categorias" />
+    <SHeader title="Mais vendidos" subtitle="os favoritos" />
+    <FavoriteProductRow />
+    <SHeader title="Categorias" subtitle="escolha por categorias" />
     <SRow
       ><CategoryIcon
         image="https://i.imgur.com/45EEuCw.png"
@@ -27,7 +27,13 @@
         title="Correntes"
       ></CategoryIcon
     ></SRow>
-    <ColumnHeader title="Presentes" subtitle="escolha por categorias" />
+    <SHeader title="Presentes" subtitle="escolha por categorias" />
+    <GiftRow />
+    <SHeader
+      title="Coleção de Pedrarias"
+      subtitle="Peças de prata com semijoias"
+    />
+    <StoneProductRow />
   </div>
 </template>
 
@@ -35,10 +41,12 @@
 import { defineComponent } from "vue";
 import NavigationBar from "@/components/NavigationBar.vue";
 import NewsCarousel from "@/components/NewsCarousel.vue";
-import ColumnHeader from "@/components/ColumnHeader.vue";
-import ProductColumn from "@/components/ProductColumn.vue";
+import SHeader from "@/components/SHeader.vue";
+import FavoriteProductRow from "@/components/FavoriteProductRow.vue";
 import SRow from "@/components/SRow.vue";
 import CategoryIcon from "@/components/CategoryIcon.vue";
+import StoneProductRow from "@/components/StoneProductRow.vue";
+import GiftRow from "@/components/GiftRow.vue";
 
 import usePageTitle from "@/composables/pageTitle";
 
@@ -51,10 +59,12 @@ export default defineComponent({
   components: {
     NavigationBar,
     NewsCarousel,
-    ColumnHeader,
-    ProductColumn,
+    SHeader,
+    FavoriteProductRow,
     SRow,
     CategoryIcon,
+    StoneProductRow,
+    GiftRow,
   },
 });
 </script>
